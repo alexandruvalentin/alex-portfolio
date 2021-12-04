@@ -1,9 +1,9 @@
-/*=============== MENU HIDDEN ===============*/
+/*=============== MENU ===============*/
 const navMenu = document.getElementById('nav-menu'),
       navToggle = document.getElementById('nav-toggle'),
       navClose = document.getElementById('nav-close')
 
-/*=============== SHOW MENU ===============*/
+/* SHOW MENU*/
 /* Validate if constant exists */
 if(navToggle){
     navToggle.addEventListener('click', () => {
@@ -11,7 +11,7 @@ if(navToggle){
     })
 }
 
-/*=============== HIDE MENU ===============*/
+/* HIDE MENU*/
 /* Validate if constant exists */
 if(navClose){
     navClose.addEventListener('click', () => {
@@ -19,7 +19,7 @@ if(navClose){
     })
 }
 
-/*=============== REMOVE MENU ON CLICK ===============*/
+/*=============== HIDE ON CLICK ===============*/
 const navLink = document.querySelectorAll('.nav__link')
 
 function linkAction(){
@@ -29,3 +29,22 @@ function linkAction(){
 }
 
 navLink.forEach(n => n.addEventListener('click', linkAction))
+
+/*=============== SKILLS - ACCORDION ===============*/
+const skillsContent = document.getElementsByClassName('skills__content'),
+      skillsHeader = document.querySelectorAll('.skills__header')
+
+function toggleSkills(){
+    let itemClass = this.parentNode.className
+
+    for(i = 0; i < skillsContent.length; i++){
+        skillsContent[i].className = 'skills__content skills__close'
+    }
+    if(itemClass === 'skills__content skills__close'){
+        this.parentNode.className = 'skills__content skills__open'
+    }
+}
+
+skillsHeader.forEach((el) => {
+    el.addEventListener('click', toggleSkills)
+})
