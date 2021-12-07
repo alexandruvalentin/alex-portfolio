@@ -105,3 +105,14 @@ function scrollActive() {
     })
 }
 window.addEventListener('scroll', scrollActive)
+
+/*=============== HEADER BACKGROUND CHANGE ON SCROLL ===============*/
+function scrollHeader() {
+    const nav = document.getElementById('header')
+    // Add .scroll-header class to <header> when the scroll is greater than 80 vh
+    if (this.scrollY > 80)
+        nav.classList.add('scroll-header');
+        else
+        nav.classList.remove('scroll-header');
+}
+window.addEventListener('scroll', scrollHeader)
