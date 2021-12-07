@@ -1,11 +1,11 @@
 /*=============== MENU ===============*/
 const navMenu = document.getElementById('nav-menu'),
-      navToggle = document.getElementById('nav-toggle'),
-      navClose = document.getElementById('nav-close')
+    navToggle = document.getElementById('nav-toggle'),
+    navClose = document.getElementById('nav-close')
 
 /* SHOW MENU*/
 /* Validate if constant exists */
-if(navToggle){
+if (navToggle) {
     navToggle.addEventListener('click', () => {
         navMenu.classList.add('show-menu')
     })
@@ -13,7 +13,7 @@ if(navToggle){
 
 /* HIDE MENU*/
 /* Validate if constant exists */
-if(navClose){
+if (navClose) {
     navClose.addEventListener('click', () => {
         navMenu.classList.remove('show-menu')
     })
@@ -22,7 +22,7 @@ if(navClose){
 /*=============== HIDE ON CLICK ===============*/
 const navLink = document.querySelectorAll('.nav__link')
 
-function linkAction(){
+function linkAction() {
     const navMenu = document.getElementById('nav-menu')
     // hide menu when any nav link is clicked
     navMenu.classList.remove('show-menu')
@@ -32,15 +32,15 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*=============== SKILLS - ACCORDION ===============*/
 const skillsContent = document.getElementsByClassName('skills__content'),
-      skillsHeader = document.querySelectorAll('.skills__header')
+    skillsHeader = document.querySelectorAll('.skills__header')
 
-function toggleSkills(){
+function toggleSkills() {
     let itemClass = this.parentNode.className
 
-    for(i = 0; i < skillsContent.length; i++){
+    for (i = 0; i < skillsContent.length; i++) {
         skillsContent[i].className = 'skills__content skills__close'
     }
-    if(itemClass === 'skills__content skills__close'){
+    if (itemClass === 'skills__content skills__close') {
         this.parentNode.className = 'skills__content skills__open'
     }
 }
@@ -51,20 +51,37 @@ skillsHeader.forEach((el) => {
 
 /*=============== QUALIFICATIONS TABS ===============*/
 const tabs = document.querySelectorAll('[data-target]')
-      tabContents = document.querySelectorAll('[data-content]')
+tabContents = document.querySelectorAll('[data-content]')
 
-tabs.forEach(tab =>{
-    tab.addEventListener('click', () =>{
+tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
         const target = document.querySelector(tab.dataset.target)
 
-        tabContents.forEach(tabContent =>{
+        tabContents.forEach(tabContent => {
             tabContent.classList.remove('qualification__active')
         })
         target.classList.add('qualification__active')
 
-        tab.forEach(tab=>{
+        tab.forEach(tab => {
             tab.classList.remove('qualification__active')
         })
         tab.classList.add('qualification__active')
     })
 })
+
+/*=============== PORTFOLIO SWIPER ===============*/
+/* credits: https://swiperjs.com/ */
+var swiper = new Swiper('.portfolio__container', {
+    cssMode: true,
+    loop: true,
+
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+    },
+    mousewheel: true,
+    keyboard: true,
+});
