@@ -109,10 +109,22 @@ window.addEventListener('scroll', scrollActive)
 /*=============== HEADER BACKGROUND CHANGE ON SCROLL ===============*/
 function scrollHeader() {
     const nav = document.getElementById('header')
-    // Add .scroll-header class to <header> when the scroll is greater than 80 vh
+    // Add .scroll-header class to <header> when the scroll
+    // is greater than 80 vh(viewport height)
     if (this.scrollY > 80)
         nav.classList.add('scroll-header');
-        else
+    else
         nav.classList.remove('scroll-header');
 }
 window.addEventListener('scroll', scrollHeader)
+
+/*=============== SHOW SCROLL TO TOP BUTTON ===============*/
+function scrollUp() {
+    const scrollUp = document.getElementById('scroll-up');
+    // Add show-scroll class to <a> when vh > 560
+    if(this.scrollY >= 560)
+    scrollUp.classList.add('show-scroll');
+    else
+    scrollUp.classList.remove('show-scroll');
+}
+window.addEventListener('scroll', scrollUp)
