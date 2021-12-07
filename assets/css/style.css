@@ -63,6 +63,34 @@
     }
 }
 
+/*=============== DARK THEME ===============*/
+body.dark-theme {
+    /* HSL color Mode */
+    --first-color-second: hsl(var(--hue-color), 28%, 10%);
+    --title-color: hsl(var(--hue-color), 13%, 95%);
+    --text-color: hsl(var(--hue-color), 13%, 75%);
+    --input-color: hsl(var(--hue-color), 29%, 16%);
+    --body-color: hsl(var(--hue-color), 28%, 12%);
+    --container-color: hsl(var(--hue-color), 29%, 16%)
+}
+
+/* Light/Dark mode button */
+.nav__btns {
+    display: flex;
+    align-items: center;
+}
+
+.change-theme {
+    font-size: 1.25rem;
+    color: var(--title-color);
+    margin-right: var(--mb-1);
+    cursor: pointer;
+}
+
+.change-theme:hover {
+    color: var(--first-color);
+}
+
 /*=============== BASE ===============*/
 * {
     box-sizing: border-box;

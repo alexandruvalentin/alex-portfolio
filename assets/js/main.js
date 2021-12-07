@@ -128,3 +128,33 @@ function scrollUp() {
     scrollUp.classList.remove('show-scroll');
 }
 window.addEventListener('scroll', scrollUp)
+
+/*=============== LIGHT/DARK MODE ===============*/
+const themeButton = document.getElementById('theme-button')
+const darkTheme = 'dark-theme'
+const iconTheme = 'uil-sun'
+
+// Previously selected (if user selects)
+const selectedTheme = localStorage.getItem('selected-theme')
+const selectedIcon = localStorage.getItem('selected-icon')
+
+// Obtain the current interface theme by validating the dark-theme class
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+const getCurrentIcon = () => document.body.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun'
+
+// Validate if user chose theme
+if(selectedTheme) {
+    // Verify
+    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+    themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme)
+}
+
+// Flip switch Light/Dark mode button
+themeButton.addEventListener('click', () =>{
+    // Toggle dark theme and icon
+    document.body.classList.toggle(darkTheme)
+    themeButton.classList.toggle(iconTheme)
+    // Save current theme and icon
+    localStorage.setItem('selected-theme', getCurrentTheme())
+    localStorage.setItem('selected-icon', getCurrentIcon())
+})
