@@ -326,6 +326,20 @@ img {
     align-items: center;
 }
 
+.button--white {
+    background-color: #FFF;
+    color: var(--first-color);
+}
+
+.button--white:hover {
+    background-color: #FFF;
+}
+
+.button--small {
+    padding: .75rem 1rem;
+}
+
+
 /*=============== ABOUT ===============*/
 .about__img {
     width: 200px;
@@ -605,6 +619,37 @@ img {
 .swiper-pagination-bullet {
     outline: none;
 }
+
+/*=============== CTA ===============*/
+.cta {
+    text-align: center;
+}
+
+.cta__bg {
+    background-color: var(--first-color);
+    padding-top: 3rem;
+}
+
+.cta__title {
+    font-size: var(--h2-font-size);
+    margin-bottom: var(--mb-0-75);
+}
+
+.cta__description {
+    margin-bottom: var(--mb-1-5);
+}
+
+.cta__title,
+.cta__description {
+    color: #FFF;
+}
+
+.cta__img {
+    width: 232px;
+    justify-self: center;
+    margin-bottom: var(--mb-2);
+}
+
 
 /*=============== CONTACT ME ===============*/
 .contact__container {
