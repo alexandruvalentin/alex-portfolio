@@ -311,7 +311,7 @@ img {
 }
 
 .home__blob {
-    width: 470px;
+    width: 270px;
 }
 
 .home__blob-img {
@@ -872,7 +872,7 @@ img {
     }
 
     .home__blob {
-        width: 180px;
+        width: 200px;
     }
 
     .skills__title {
@@ -984,8 +984,8 @@ img {
         column-gap: 2rem;
     }
 
-    .home__img {
-        width: 270px;
+    .home__blob {
+        width: 290px;
     }
 
     .home__scroll {
@@ -1094,8 +1094,8 @@ img {
         padding: 0;
     }
 
-    .home__img {
-        width: 320px;
+    .home__blob {
+        width: 370px;
     }
 
     .home__social {
