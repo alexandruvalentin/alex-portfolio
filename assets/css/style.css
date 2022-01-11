@@ -1,5 +1,6 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Poppins:ital,wght@0,400;0,600;1,600;1,700&display=swap');
 
 :root {
     --header-height: 3rem;
@@ -185,7 +186,12 @@ img {
     align-items: center;
 }
 
-.nav__logo,
+.nav__logo {
+    font-size: var(--big-font-size);
+    font-family: 'Cookie', cursive;
+    color: var(--title-color);
+}
+
 .nav__toggle {
     color: var(--title-color);
     font-weight: var(--font-medium);
