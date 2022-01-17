@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-This is a web application that serves as my personal pertfolio and curriculum vitae.
+This is a web application that serves as my personal portfolio and curriculum vitae.
 
 ## Demo
 

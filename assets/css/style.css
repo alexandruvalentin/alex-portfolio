@@ -595,12 +595,13 @@ img {
 .qualification__subtitle {
     display: inline-block;
     font-size: var(--small-font-size);
-    margin-bottom: var(--mb-1-5);
+    margin-bottom: var(--mb-0-5);
 }
 
 .qualification__calendar {
     font-size: var(--smaller-font-size);
     color: var(--text-color-light);
+    margin-bottom: var(--mb-1-5);
 }
 
 .qualification__rounder {
