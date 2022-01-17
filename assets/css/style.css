@@ -790,7 +790,7 @@ img {
 }
 
 .footer__title {
-    font-size: var(--h1-font-size);
+    width: 125px;;
     margin-bottom: var(--mb-0-25);
 }
 
@@ -800,6 +800,7 @@ img {
 
 .footer__links {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     row-gap: 1.5rem;
 }
